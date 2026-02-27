@@ -1,0 +1,1 @@
+This project analyzes transactional data from a UK-based online retail company selling all-occasion gifts (many customers are wholesalers).
