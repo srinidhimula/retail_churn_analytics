@@ -151,3 +151,19 @@ Happy modeling!
 [0m13:24:38.523478 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bf4d0f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11c79e320>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11c79e470>]}
 [0m13:24:38.524736 [debug] [MainThread]: Flushing usage events
 [0m13:24:39.091833 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:13:14.653864 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a845180>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b928a00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b928670>]}
+
+
+============================== 14:13:14.657143 | 38c68754-3704-415a-8552-5901b9d115ca ==============================
+[0m14:13:14.657143 [info ] [MainThread]: Running with dbt=1.11.6
+[0m14:13:14.657461 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'empty': 'None', 'debug': 'False', 'log_format': 'default', 'invocation_command': 'dbt docs generate', 'use_experimental_parser': 'False', 'log_cache_events': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'introspect': 'True', 'partial_parse': 'True', 'indirect_selection': 'eager', 'fail_fast': 'False', 'cache_selected_only': 'False', 'version_check': 'True', 'send_anonymous_usage_stats': 'True', 'profiles_dir': '/Users/srinidhi/.dbt', 'write_json': 'True', 'use_colors': 'True', 'warn_error': 'None', 'log_path': 'logs', 'target_path': 'None', 'printer_width': '80', 'no_print': 'None', 'quiet': 'False'}
+[0m14:13:14.657773 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /Users/srinidhi/Desktop/Portfolio_Building/Git/retail_churn_analytics/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m14:13:14.659585 [debug] [MainThread]: Resource report: {"command_name": "generate", "command_success": false, "command_wall_clock_time": 0.04302854, "process_in_blocks": "0", "process_kernel_time": 0.107855, "process_mem_max_rss": "104513536", "process_out_blocks": "0", "process_user_time": 0.64855}
+[0m14:13:14.659877 [debug] [MainThread]: Command `dbt docs generate` failed at 14:13:14.659819 after 0.04 seconds
+[0m14:13:14.660061 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a845180>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b8b36d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b86beb0>]}
+[0m14:13:14.660246 [debug] [MainThread]: Flushing usage events
+[0m14:13:15.142017 [debug] [MainThread]: An error was encountered while trying to flush usage events
