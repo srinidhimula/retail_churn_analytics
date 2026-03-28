@@ -1,8 +1,11 @@
 WITH base AS (
     SELECT 
         c.*,
-        w.* EXCEPT(customer_id)
+        w.* EXCEPT(customer_id),
+        s.* EXCEPT(customer_id)
     FROM {{ ref('int_customer_metrics') }} c
+    LEFT JOIN {{ ref('int_customer_segments') }} s
+        ON c.customer_id = s.customer_id
     LEFT JOIN {{ ref('int_customer_time_windows') }} w
         ON c.customer_id = w.customer_id
 )
@@ -11,7 +14,9 @@ SELECT
     base.customer_id,
     base.total_revenue,
     base.country,
-    base.one_time_customer,
+    base.customer_type,
+    base.value_segment,
+    base.recency_segment,
     CASE 
         WHEN recency_days > 180 THEN 1
         ELSE 0

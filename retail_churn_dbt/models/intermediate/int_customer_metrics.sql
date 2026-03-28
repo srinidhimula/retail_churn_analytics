@@ -54,12 +54,6 @@ SELECT
     ) AS recency_days,
 
     i.avg_interpurchase_days,
-
-    CASE 
-        WHEN c.total_orders = 1 THEN 1 
-        ELSE 0 
-    END AS one_time_customer
-
 FROM customer_agg c
 CROSS JOIN dataset_end d
 LEFT JOIN interpurchase i 
